@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  
+  <title>E-commerce product page By JunasVee</title>
+
+</head>
+<body>
+
+  <div class="lightbox" id="lightbox">
+    <div class="arrows">
+      <img src="./images/icon-previous.svg" alt="" class="prev" onclick="prev()">
+      <img src="./images/icon-next.svg" alt="" class="next" onclick="next()">
+    </div>
+    <div class="image-slider">
+      <div class="close-box">
+        <img src="./images/icon-close.svg" alt="" onclick="lightboxClose()">
+      </div>
+      <div id="thumbnailL">
+        <img class="big-pic" src="./images/image-product-1.jpg" alt="">
+      </div>
+      <div class="pictures">
+        <div class="one one-active" id="oneL" onclick="onelight()"></div>
+        <div class="two" id="twoL" onclick="twolight()"></div>
+        <div class="three" id="threeL" onclick="threelight()"></div>
+        <div class="four" id="fourL" onclick="fourlight()"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+
+  <header>
+    <img class="menu-bar" src="./images/icon-menu.svg" alt="" onclick="openMenu()">
+    <h2 class="logo">sneakers</h2>
+    <nav>
+      <ul id="navigation">
+        <img src="./images/icon-close-modif.svg" alt="" class="close-menu" onclick="closeMenu()">
+        <li><a href="https://www.linkedin.com/in/arjuna-v-208183218/">Collections</a></li>
+        <li><a href="https://www.linkedin.com/in/arjuna-v-208183218/">Men</a></li>
+        <li><a href="https://www.linkedin.com/in/arjuna-v-208183218/">Women</a></li>
+        <li><a href="https://www.linkedin.com/in/arjuna-v-208183218/">About</a></li>
+        <li><a href="https://www.linkedin.com/in/arjuna-v-208183218/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="profile">
+      <div class="cart" id="cart">
+        <img class="main-img-cart" id="cart-image" src="./images/icon-cart.svg" onclick="cartImage()">
+        <p><span id="num"></span></p>
+        <div id="cart-content" class="cart-content">
+          <h4>Cart</h4>
+          <div class="items">
+            <p id="empty">Your cart is empty.</p>
+            <div class="item-content item-content-empty" id="item-content">
+              <div class="item">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumb">
+                <div class="item-desc">
+                  <p class="product-name">Fall Limited Edition Sneakers</p>
+                  <p class="item-price"><span id="base-price">$125.00 x</span> <span id="multiply"></span> <strong>$<span id="final-price">250</span>.00</strong></p>
+                </div>
+                <img src="./images/icon-delete.svg" alt="" onclick="clearCart()" class="delete">
+              </div>
+              <a href="https://www.linkedin.com/in/arjuna-v-208183218/"><button class="final-checkout">Checkout</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img class="avatar" src="./images/image-avatar.png" alt="" >
+    </div>
+  </header>
+
+  <!-- content -->
+
+  <main>
+    <div class="container">
+
+      <div class="picture">
+        <div id="thumbnail">
+          <img src="./images/image-product-1.jpg" alt="" onclick="lightboxOpen()">
+          <div class="sliders">
+            <img class="m-prev" src="./images/icon-previous.svg" alt="" onclick="mobilePrev()">
+            <img class="m-next" src="./images/icon-next.svg" alt="" onclick="mobileNext()">
+          </div>
+        </div>
+        <div class="pictures">
+          <div class="one one-active" id="one" onclick="one()"></div>
+          <div class="two" id="two" onclick="two()"></div>
+          <div class="three" id="three" onclick="three()"></div>
+          <div class="four" id="four" onclick="four()"></div>
+        </div>
+      </div>
+
+      <div class="desc">
+        <h3 class="title">SNEAKER COMPANY</h3>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="info">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="for-mobile">
+          <div class="price">
+            <h2>$125.00</h2>
+            <h3>50%</h3>
+          </div>
+          <p class="discounted">$250.00</p>
+        </div>
+        <div class="buttons">
+          <div class="count">
+            <button id="decrement" onclick="decrement()">─</button>
+            <input id="amount" type="number" value="0" min="0">
+            <button id="increment" onclick="increment()">+</button>
+          </div>
+          <button id="checkout" class="checkout"  onclick="checkout()"><img src="./images/icon-cart-white.svg" alt=""> Add to cart</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
